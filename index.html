@@ -21,14 +21,8 @@
             data-storefront="store1qa32.qa3.onfastspring.com/popup-store1qa32">            
         </script>
         <script>
-            function onFSPopupClosed(orderReference) {
-              if (orderReference)
-              {
-                   console.log(orderReference.reference);
-                   fastspring.builder.reset();                   
-              } else {
-                   console.log("no order ID");
-              }
+            function onFSPopupClosed() {
+                console.log('Hola Orlando');                
             }
         </script>
 
