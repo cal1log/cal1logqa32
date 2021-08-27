@@ -17,8 +17,21 @@
             id="fsc-api"
             src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
             type="text/javascript"
-            data-storefront="store1qa32.qa3.onfastspring.com/popup-store1qa32">
-        </script>       
+            data-popup-closed="onFSPopUpClosed"
+            data-storefront="store1qa32.qa3.onfastspring.com/popup-store1qa32">            
+        </script>
+        <script>
+            function onFSPopupClosed(orderReference) {
+              if (orderReference)
+              {
+                   console.log(orderReference.reference);
+                   fastspring.builder.reset();                   
+              } else {
+                   console.log("no order ID");
+              }
+            }
+        </script>
+
     </head>
     <body>
         <div display="flex">
